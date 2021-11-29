@@ -53,7 +53,7 @@ public class LineBarVisualizer extends BaseVisualizer {
         density = 50;
         gap = 4;
         middleLine = new Paint();
-        middleLine.setColor(Color.BLUE);
+        middleLine.setColor(Color.TRANSPARENT);
     }
 
     /**
@@ -81,9 +81,6 @@ public class LineBarVisualizer extends BaseVisualizer {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (middleLine.getColor() != Color.BLUE) {
-            middleLine.setColor(color);
-        }
         if (bytes != null) {
             float barWidth = getWidth() / density;
             float div = bytes.length / density;
